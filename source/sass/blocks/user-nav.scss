@@ -1,0 +1,48 @@
+.user-nav {
+  @include list-default;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+}
+
+.user-nav__link:hover {
+  svg {
+    fill: $color-hover;
+  }
+}
+
+.user-nav__link--favorite {
+  position: relative;
+
+  &:hover {
+    svg {
+      stroke: $color-hover;
+    }
+  }
+
+  span {
+    position: absolute;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+    right: -3px;
+    top: 0;
+    background-color: #e6c8b4;
+  }
+
+  svg {
+    stroke: #1b1a17;
+  }
+}
+
+.user-nav__item svg {
+  fill: #1b1a17;
+}

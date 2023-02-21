@@ -1,0 +1,70 @@
+.card-list {
+  @include list-default;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+.card-list__item {
+  background-color: #fdfdfb;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1366px) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.card-list__brend {
+  font-family: $ff-playfair;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: $color-grey-transparent;
+  text-transform: uppercase;
+}
+
+.card-list__price {
+  font-family: $ff-prata;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-grey-transparent;
+}
+
+.card-list__img-wrapper {
+  max-width: 313px;
+  max-height: 313px;
+}
+
+.card-list__link {
+  font-family: $ff-playfair;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 50px;
+
+  &:hover {
+    color: $color-hover;
+  }
+}

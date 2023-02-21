@@ -1,0 +1,29 @@
+.header-nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 500px;
+
+  @media (max-width: 900px) {
+    gap: 5px;
+    justify-content: center;
+  }
+}
+
+.header-nav__link {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-grey-header;
+
+  @media (max-width: 900px) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &:hover {
+    color: $color-hover;
+  }
+}
